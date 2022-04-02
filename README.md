@@ -7,7 +7,7 @@ Shift-click skills in the skill tree to toggle favorite status. Favorite skills 
 To enable history mode, edit `BepInEx\config\net.perdition.com3d2.freeyotogifavorites.cfg` (created after first run) to set `HistoryMode = true`.
 
 ![playlist](https://user-images.githubusercontent.com/87424475/161384594-05302b97-408d-440c-b305-e2162208b1a7.png)
-![skill-tree](https://user-images.githubusercontent.com/87424475/161384481-6092db59-e7a8-4464-93d3-12ebf04a7762.png)
+![skill-tree](https://user-images.githubusercontent.com/87424475/161385578-9b96149c-c783-4fcc-b217-0cf8d47bffab.png)
 
 ## Installing
 
