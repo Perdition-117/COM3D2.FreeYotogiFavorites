@@ -103,11 +103,12 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 	private static bool TryGetButtonSkillId(UIWFTabButton button, out int skillId) {
 		skillId = 0;
 
-		if (!YotogiManager.instans?.is_free_mode ?? false) {
+		var yotogiManager = YotogiManager.instans;
+		if (yotogiManager == null || !yotogiManager.is_free_mode) {
 			return false;
 		}
 
-		var freeSkillSelect = YotogiManager.instans.free_skill_select_mgr_.free_skill_select_;
+		var freeSkillSelect = yotogiManager.free_skill_select_mgr_.free_skill_select_;
 
 		var type = freeSkillSelect.update_obj_dic_["タイプ"];
 		var category = freeSkillSelect.update_obj_dic_["カテゴリー"];
