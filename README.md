@@ -11,7 +11,7 @@ To enable history mode, edit `BepInEx\config\net.perdition.com3d2.freeyotogifavo
 
 ## Installing
 
-Get the latest version from [the release page](https://github.com/Perdition-117/COM3D2.FreeYotogiFavorites/releases/latest). Extract the archive and place `COM3D2.FreeYotogiFavorites.dll` in `BepInEx\plugins`.
+Get the latest version from [the release page](../../releases/latest). Extract the archive and place `COM3D2.FreeYotogiFavorites.dll` in `BepInEx\plugins`.
 
 ## Caveats
 
