@@ -1,14 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net35</TargetFramework>
-    <LangVersion>10</LangVersion>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Product>FreeYotogiFavorites</Product>
     <Version>1.0.2</Version>
     <Authors>Perdition</Authors>
     <PackageProjectUrl>https://github.com/Perdition-117/COM3D2.FreeYotogiFavorites</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Perdition-117/COM3D2.FreeYotogiFavorites.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>

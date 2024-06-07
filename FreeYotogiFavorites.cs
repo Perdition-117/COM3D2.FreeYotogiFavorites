@@ -161,7 +161,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		}
 	}
 
-	[HarmonyPatch(typeof(FreeSkillSelect), "CreateSkill")]
+	[HarmonyPatch(typeof(FreeSkillSelect), nameof(FreeSkillSelect.CreateSkill))]
 	[HarmonyPostfix]
 	private static void OnCreateSkill(FreeSkillSelect __instance, FreeSkillSelect.ButtonData skill_button_data) {
 		if (_isHistoryMode.Value) {
@@ -178,7 +178,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		}
 	}
 
-	[HarmonyPatch(typeof(UIWFTabButton), "OnClick")]
+	[HarmonyPatch(typeof(UIWFTabButton), nameof(UIWFTabButton.OnClick))]
 	[HarmonyPrefix]
 	private static bool UIWFTabButton_OnClick(UIWFTabButton __instance) {
 		if (_isHistoryMode.Value || !(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))) {
@@ -207,7 +207,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		return true;
 	}
 
-	[HarmonyPatch(typeof(YotogiPlayManager), "OnSkillIconClick")]
+	[HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.OnSkillIconClick))]
 	[HarmonyPostfix]
 	private static void OnSkillIconClick(YotogiPlayManager __instance) {
 		if (!__instance.is_free_mode) {
@@ -220,7 +220,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		freeSkillSelect.SelectSkill(skill, freeSkillSelect.stageExpansionPack);
 	}
 
-	[HarmonyPatch(typeof(YotogiPlayManager), "UpdateSkillTower")]
+	[HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.UpdateSkillTower))]
 	[HarmonyPrefix]
 	private static void PreUpdateSkillTower(YotogiPlayManager __instance, ref YotogiManager.PlayingSkillData __state) {
 		if (!__instance.is_free_mode) {
@@ -233,7 +233,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		playSkillArray[0] = _activeSkill;
 	}
 
-	[HarmonyPatch(typeof(YotogiPlayManager), "UpdateSkillTower")]
+	[HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.UpdateSkillTower))]
 	[HarmonyPostfix]
 	private static void PostUpdateSkillTower(YotogiPlayManager __instance, YotogiManager.PlayingSkillData __state) {
 		if (!__instance.is_free_mode) {
@@ -255,7 +255,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		}
 	}
 
-	[HarmonyPatch(typeof(YotogiPlayManager), "NextSkill")]
+	[HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.NextSkill))]
 	[HarmonyPrefix]
 	private static void OnNextSkill(YotogiPlayManager __instance) {
 		if (!__instance.is_free_mode) {
@@ -268,7 +268,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		SetSkillArray(__instance.yotogi_mgr_);
 	}
 
-	[HarmonyPatch(typeof(FreeSkillSelect), "OnClickStageEvent")]
+	[HarmonyPatch(typeof(FreeSkillSelect), nameof(FreeSkillSelect.OnClickStageEvent))]
 	[HarmonyPostfix]
 	private static void OnClickStageEvent(FreeSkillSelect __instance) {
 		// manually selecting a skill will reset the playlist, so it needs to be set again
