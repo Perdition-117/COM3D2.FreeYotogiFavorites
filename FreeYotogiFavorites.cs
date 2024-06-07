@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using BepInEx;
 using BepInEx.Configuration;
@@ -217,7 +217,7 @@ class FreeYotogiFavorites : BaseUnityPlugin {
 		var freeSkillSelect = __instance.free_skill_select_;
 		var skill = __instance.yotogi_mgr_.play_skill_array[__instance.playing_skill_no_ + 1].skill_pair.base_data;
 		freeSkillSelect.select_skill_ = skill;
-		freeSkillSelect.SelectSkill(skill, freeSkillSelect.user_request_stage);
+		freeSkillSelect.SelectSkill(skill, freeSkillSelect.stageExpansionPack);
 	}
 
 	[HarmonyPatch(typeof(YotogiPlayManager), "UpdateSkillTower")]
