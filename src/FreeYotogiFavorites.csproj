@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Product>FreeYotogiFavorites</Product>
     <Version>1.0.2</Version>
     <Authors>Perdition</Authors>
     <PackageProjectUrl>https://github.com/Perdition-117/COM3D2.FreeYotogiFavorites</PackageProjectUrl>

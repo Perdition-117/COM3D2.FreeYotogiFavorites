@@ -6,7 +6,7 @@ using HarmonyLib;
 using UnityEngine;
 using Yotogis;
 
-namespace COM3D2.FreeYotogiFavorites;
+namespace FreeYotogiFavorites;
 
 [BepInPlugin("net.perdition.com3d2.freeyotogifavorites", PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
 class FreeYotogiFavorites : BaseUnityPlugin {
