@@ -1,18 +1,18 @@
-# COM3D2.FreeYotogiFavorites
+# FreeYotogiFavorites
 
-Allows pinning favorite yotogi skills for quick access in memories mode. You may also enable history mode in order to show recently used skills instead of favorites.
+Allows pinning favorite yotogi skills for quick access in memories mode. You may also enable history mode in order to show recently used skills in the playlist.
 
-Shift-click skills in the skill tree to toggle favorite status. Favorite skills are highlighted in yellow. You may set up to six favorite skills.
-
-To enable history mode, edit `BepInEx\config\net.perdition.com3d2.freeyotogifavorites.cfg` (created after first run) to set `HistoryMode = true`.
-
-![playlist](https://user-images.githubusercontent.com/87424475/161384594-05302b97-408d-440c-b305-e2162208b1a7.png)
-![skill-tree](https://user-images.githubusercontent.com/87424475/161385578-9b96149c-c783-4fcc-b217-0cf8d47bffab.png)
+![favorites](images/favorites.png)
+![playlist](images/playlist.png)
 
 ## Installing
 
-Get the latest version from [the release page](../../releases/latest). Extract the archive and place `COM3D2.FreeYotogiFavorites.dll` in `BepInEx\plugins`.
+Get the latest version from [the release page](../../releases/latest). Extract the archive contents into the root of your game directory.
 
-## Caveats
+## Usage
 
-If one or more favorite skills are unavailable to the current maid, it may appear as though the number of available favorites are reduced, since the unavailable skills count towards the limit. The same is true for history mode, where a reduced number of recent skills may be shown until unavailable skills have been flushed out.
+Shift-click skills in the skill tree to toggle favorite status. Favorite skills are highlighted in yellow.
+
+## Configuration
+
+Settings are stored in `BepInEx\config\net.perdition.com3d2.freeyotogifavorites.cfg` and can be modified using a text editor or a BepInEx configuration manager.
